@@ -1,0 +1,11 @@
+{
+	"manifest_version": 2,
+	"name": "Tab Override with Unsplash",
+	"version": "1.0",
+
+	"permissions":["tabs"],
+
+	"chrome_url_overrides":{
+		"newtab": "newTab.html"
+	}
+}
