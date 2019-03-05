@@ -1,0 +1,24 @@
+body,h1,h2,h3,h4,h5,h6,p,div,img,span{
+	margin: 0;
+	padding: 0;
+}
+
+#content{
+	margin:15px;
+}
+
+h2{
+	font-size: 50px;
+}
+button{
+	padding:10px 20px;
+
+}
+
+
+#left, #right{
+	font-size: 20px;
+	padding: 5px;
+	border: 1px solid black;
+	display:inline-block;
+}
