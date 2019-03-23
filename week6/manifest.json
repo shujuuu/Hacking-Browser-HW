@@ -1,0 +1,43 @@
+{
+	"name" : "Pomodoro Timer",
+	"version" : "3.0",
+	"manifest_version" : 2,
+
+	//poup
+	"browser_action":{
+		"default_title": "Set timer for certain amount of time",
+		"default_popup": "popup.html",
+		"default_icon": "tomato.png"		//format: PNG
+	},
+
+	//runs in foreground
+	"content_scripts":[
+		{
+			"matches": ["<all_urls>"],		//match pattern
+			"css": ["styles.css"],
+			"js": ["contentScript.js","p5.dom.js","p5.dom.min.js","p5.js","p5.min.js"]
+		}
+	],
+
+	//keyboard shortcuts
+	"commands": {
+      "_execute_browser_action": {
+        "suggested_key": {
+          "default": "Ctrl+Shift+F",
+          "mac": "MacCtrl+Shift+F"
+        },
+        "description": "Opens popup.html"
+      }
+    },
+  
+
+	//runs in background
+	"background": {
+    "scripts": ["jquery.js","background.js"],
+    "persistent": true
+  },
+
+  "permissions": [
+    "alarms", "tabs"
+  ]
+}
